@@ -113,6 +113,8 @@ function restartQuiz() {
   score = 0;
   loadQuestion();
 }
+loadQuestion();
+
 
 
 
