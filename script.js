@@ -95,6 +95,7 @@ function showFinalScore() {
   document.getElementById("quiz-box").innerHTML = `
     <h2>Quiz Completed!</h2>
     <p>${message}</p>
+    <button onclick="restartQuiz()">🔁 Play Again</button>
   `;
 }
 
@@ -107,4 +108,11 @@ document.getElementById("next-btn").addEventListener("click", () => {
   }
 });
 
-loadQuestion();
+function restartQuiz() {
+  current = 0;
+  score = 0;
+  loadQuestion();
+}
+
+
+
