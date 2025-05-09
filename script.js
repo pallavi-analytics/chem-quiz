@@ -111,8 +111,27 @@ document.getElementById("next-btn").addEventListener("click", () => {
 function restartQuiz() {
   current = 0;
   score = 0;
+
+  document.getElementById("quiz-box").innerHTML = `
+    <div id="question">Loading question...</div>
+    <div id="options"></div>
+    <div id="result" class="hidden"></div>
+    <button id="next-btn">Next</button>
+  `;
+
+  // Reattach event listener to new button
+  document.getElementById("next-btn").addEventListener("click", () => {
+    current++;
+    if (current < questions.length) {
+      loadQuestion();
+    } else {
+      showFinalScore();
+    }
+  });
+
   loadQuestion();
 }
+
 loadQuestion();
 
 
