@@ -12,7 +12,7 @@ const questions = [
     question: "Which gas is used in balloons?",
     options: ["Oxygen", "Helium", "Nitrogen", "Hydrogen"],
     correct: 1
-  }
+  },
   {
   question: "Which of the following is the lightest subatomic particle?",
   options: ["Proton", "Neutron", "Electron", "Nucleus"],
